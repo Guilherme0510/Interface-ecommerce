@@ -18,7 +18,7 @@ const LoginSignup = () => {
     console.log("Login", formData);
     let responseData
 
-    await fetch('http://localhost:4000/login', {
+    await fetch('https://ecommerce-projeto-aulaa.vercel.app/login', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -40,7 +40,7 @@ const LoginSignup = () => {
   const signUp = async() => {
     console.log("Sign Up", formData);
     let responseData
-    await fetch('http://localhost:4000/signup', {
+    await fetch('https://ecommerce-projeto-aulaa.vercel.app/signup', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
