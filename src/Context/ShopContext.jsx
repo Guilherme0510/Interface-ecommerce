@@ -14,12 +14,12 @@ export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart())
 
   useEffect(() => {
-    fetch('https://ecommerce-projeto-aulaa.vercel.app/allproducts')
+    fetch('https://ecommerce-projeto-aula.onrender.com/allproducts')
     .then((response) => response.json())
     .then((data) => setAll_Product(data))
 
     if(localStorage.getItem('auth-token')){
-      fetch('https://ecommerce-projeto-aulaa.vercel.app/getcart', {
+      fetch('https://ecommerce-projeto-aula.onrender.com/getcart', {
         method: "POST",
         headers:{
           Accept: 'application/form-data',
@@ -36,7 +36,7 @@ export const ShopContextProvider = (props) => {
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     if(localStorage.getItem('auth-token')){
-      fetch ('https://ecommerce-projeto-aulaa.vercel.app/addtocart', {
+      fetch ('https://ecommerce-projeto-aula.onrender.com/addtocart', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',
@@ -52,7 +52,7 @@ export const ShopContextProvider = (props) => {
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
     if(localStorage.getItem('auth-token')){
-      fetch ('https://ecommerce-projeto-aulaa.vercel.app/removefromcart', {
+      fetch ('https://ecommerce-projeto-aula.onrender.com/removefromcart', {
         method: 'POST',
         headers: {
           Accept: 'application/form-data',

@@ -18,7 +18,7 @@ const LoginSignup = () => {
     console.log("Login", formData);
     let responseData
 
-    await fetch('https://ecommerce-projeto-aulaa.vercel.app/login', {
+    await fetch('https://ecommerce-projeto-aula.onrender.com/login', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -40,7 +40,7 @@ const LoginSignup = () => {
   const signUp = async() => {
     console.log("Sign Up", formData);
     let responseData
-    await fetch('https://ecommerce-projeto-aulaa.vercel.app/signup', {
+    await fetch('https://ecommerce-projeto-aula.onrender.com/signup', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
