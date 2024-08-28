@@ -27,7 +27,7 @@ const LoginSignup = () => {
       body:JSON.stringify(formData)
     }).then((response) =>response.json()).then((data)=>responseData = data)
 
-    if(responseData.sucess){
+    if(responseData.success){
       localStorage.setItem('auth-token', responseData.token)
       window.location.replace("/")
     }
